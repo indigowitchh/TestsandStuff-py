@@ -1,6 +1,6 @@
 import random
 
-candy = [0, 0, 0, 0, 0]
+candy = [0, 0, 0, 0, 0, 0]
 
 num = random.randrange(0,100)
 
@@ -21,6 +21,7 @@ def candies():
         candy[4] = random.randrange(1,4)
         print("You got", candy[4], "sour patch kids!")
     else:
+        candy[5] = random.randrange(1,4)
         print("You got a rock.")
     
 
