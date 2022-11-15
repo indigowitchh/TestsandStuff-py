@@ -1,34 +1,35 @@
 import random
 
-candy = [0, 0, 0, 0, 0, 0]
+candybag = [0, 0, 0, 0, 0, 0]
 
 num = random.randrange(0,100)
 
 def candies():
+    numBars = random.randrange(1,5)
+    num = random.randrange(0,100)
     if num < 15:
-        candy[0] = random.randrange(1,4)
-        print("You got", candy[0], "butterfingers!")
+        print("You got", numBars, "butterfinger!")
+        candybag[0]+= numBars
     elif num < 35:
-        candy[1] = random.randrange(1,4)
-        print("You got", candy[1], "hersheys!")
+        print("You got" , numBars,  "hersheys!")
+        candybag[1]+= numBars
     elif num < 70:
-        candy[2] = random.randrange(1,4)
-        print("You got", candy[2], "PB cups!")
+        print("You got" , numBars, "PB cup!")
+        candybag[2]+= numBars
     elif num < 80:
-        candy[3] = random.randrange(1,4)
-        print("You got", candy[3], "mnms!")
+        print("You got" , numBars,  "mnms!")
+        candybag[3]+= numBars
     elif num < 98:
-        candy[4] = random.randrange(1,4)
-        print("You got", candy[4], "sour patch kids!")
+        print("You got", numBars, "sour patch kids!")
+        candybag[4]+= numBars
     else:
-        candy[5] = random.randrange(1,4)
         print("You got a rock.")
+        candybag[5]+= 1
     
+candies()
+candies()
+candies()
+candies()
+candies()
 
-candies()
-candies()        
-candies()        
-candies()
-candies()
-
-print("Final candy count for each kind:", candy)
+print("Your candybag is now:", candybag)
