@@ -1,0 +1,47 @@
+inventory = [' ', ' ', ' ']
+items = ["Potions $5", "Food $3", "Keys $10"]
+Dabloons = 20
+
+def money(Dabloons):
+    leave = False
+    while leave == False and Dabloons != 0:
+        print("Hello traveler, welcome to the shop, you have", Dabloons, "dabloons")
+        print("Your inventory:", inventory, ". Shop items:", items)
+        choice= input("Press p to purchase a potion, f for food, k for key, and q to leave the shop")
+        
+        if choice == 'p':
+            print("You purchased a potion!")
+            inventory[0] = "Potion"
+            Dabloons -= 5
+            print("You have", Dabloons, " dabloons remaining")
+            print("---------------------------------------------------------------")
+        
+        elif choice == 'f':
+            print("You purchased food!")
+            inventory[1] = "Food"
+            Dabloons -=3
+            print("You have", Dabloons, "dabloons remaining")
+            print("---------------------------------------------------------------")
+        
+        elif choice =='k':
+            print("You purchased a key!")
+            inventory[2] = "Key"
+            Dabloons -= 10
+            print("You have", Dabloons, "dabloons remaining")
+            print("---------------------------------------------------------------")
+        
+        elif choice =='q':
+            print("Goodbye traveler, have a safe journey!")
+            leave = True
+            print("---------------------------------------------------------------")
+        
+        else:
+            print("Sorry, not an option")
+            print("---------------------------------------------------------------")
+        
+    if Dabloons == 0:
+            print("You don't have enough money for anything. Leave my shop immediateley!")
+            leave = True
+            print("---------------------------------------------------------------")
+            
+money(Dabloons)
