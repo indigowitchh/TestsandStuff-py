@@ -9,7 +9,7 @@ def money(Dabloons):
         print("Your inventory:", inventory, ". Shop items:", items)
         choice= input("Press p to purchase a potion, f for food, k for key, and q to leave the shop")
         
-        if choice == 'p' and Dabloons >= 5:
+        if choice == 'p' and Dabloons >=5:
             print("You purchased a potion!")
             inventory[0] = "Potion"
             Dabloons -= 5
@@ -37,11 +37,6 @@ def money(Dabloons):
         
         else:
             print("Sorry, not an option")
-            print("---------------------------------------------------------------")
-        
-    if Dabloons <= 0:
-            print("You don't have enough money for anything. Leave my shop immediateley!")
-            leave = True
             print("---------------------------------------------------------------")
             
 money(Dabloons)
